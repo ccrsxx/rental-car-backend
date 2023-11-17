@@ -24,6 +24,7 @@ function main() {
   upload(app);
 
   app.listen(HOST_PORT, () =>
+    // eslint-disable-next-line no-console
     console.info(`Server running on port ${HOST_PORT}`)
   );
 }

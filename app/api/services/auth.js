@@ -45,10 +45,9 @@ export async function isPasswordMatch(password, hashedPassword) {
  */
 export async function generateToken(id) {
   try {
-    const token = jwt.sign({ id }, JWT_SECRET, {
+    const token = await jwt.sign({ id }, JWT_SECRET, {
       expiresIn: '1d'
     });
-
     return token;
   } catch (err) {
     throw generateApplicationError(err, 'Error while generating token', 500);
@@ -64,7 +63,7 @@ export async function generateToken(id) {
 export async function verifyToken(token) {
   try {
     const { id } = /** @type {jwt.JwtPayload} */ (
-      jwt.verify(token, JWT_SECRET)
+      await jwt.verify(token, JWT_SECRET)
     );
 
     const user = await userService.getUser(id);

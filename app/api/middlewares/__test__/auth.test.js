@@ -254,49 +254,48 @@ describe('Auth middleware', () => {
 
       expect(mockNext).toHaveBeenCalledTimes(1);
     });
-  });
+    it('returns 403 status code with message when role is admin', () => {
+      const mockRequest = {};
 
-  it('returns 403 status code with message when role is admin', () => {
-    const mockRequest = {};
+      const mockResponse = {
+        locals: { user: { role: 'admin' } },
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn()
+      };
 
-    const mockResponse = {
-      locals: { user: { role: 'admin' } },
-      status: jest.fn().mockReturnThis(),
-      json: jest.fn()
-    };
+      const mockNext = jest.fn();
 
-    const mockNext = jest.fn();
+      authMiddleware.isSuperAdmin(mockRequest, mockResponse, mockNext);
 
-    authMiddleware.isSuperAdmin(mockRequest, mockResponse, mockNext);
+      expect(mockResponse.status).toHaveBeenCalledWith(403);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        message: 'Only superadmin is allowed for this endpoint'
+      });
 
-    expect(mockResponse.status).toHaveBeenCalledWith(403);
-    expect(mockResponse.json).toHaveBeenCalledWith({
-      message: 'Only superadmin is allowed for this endpoint'
+      expect(mockResponse.locals).toEqual({ user: { role: 'admin' } });
+      expect(mockNext).not.toHaveBeenCalled();
     });
 
-    expect(mockResponse.locals).toEqual({ user: { role: 'admin' } });
-    expect(mockNext).not.toHaveBeenCalled();
-  });
+    it('returns 403 status code with message when role is user', () => {
+      const mockRequest = {};
 
-  it('returns 403 status code with message when role is user', () => {
-    const mockRequest = {};
+      const mockResponse = {
+        locals: { user: { role: 'user' } },
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn()
+      };
 
-    const mockResponse = {
-      locals: { user: { role: 'user' } },
-      status: jest.fn().mockReturnThis(),
-      json: jest.fn()
-    };
+      const mockNext = jest.fn();
 
-    const mockNext = jest.fn();
+      authMiddleware.isSuperAdmin(mockRequest, mockResponse, mockNext);
 
-    authMiddleware.isSuperAdmin(mockRequest, mockResponse, mockNext);
+      expect(mockResponse.status).toHaveBeenCalledWith(403);
+      expect(mockResponse.json).toHaveBeenCalledWith({
+        message: 'Only superadmin is allowed for this endpoint'
+      });
 
-    expect(mockResponse.status).toHaveBeenCalledWith(403);
-    expect(mockResponse.json).toHaveBeenCalledWith({
-      message: 'Only superadmin is allowed for this endpoint'
+      expect(mockResponse.locals).toEqual({ user: { role: 'user' } });
+      expect(mockNext).not.toHaveBeenCalled();
     });
-
-    expect(mockResponse.locals).toEqual({ user: { role: 'user' } });
-    expect(mockNext).not.toHaveBeenCalled();
   });
 });
