@@ -1,5 +1,12 @@
 import { jest } from '@jest/globals';
-import * as indexController from '../index.js';
+
+const mockPublicUrl = 'https://dev.risalamin.com';
+
+jest.unstable_mockModule('../../../libs/env.js', () => ({
+  PUBLIC_URL: mockPublicUrl
+}));
+
+const indexController = await import('../index.js');
 
 describe('Index controller', () => {
   describe('Welcome message', () => {
@@ -17,7 +24,7 @@ describe('Index controller', () => {
       expect(mockResponse.status).toHaveBeenCalledWith(200);
       expect(mockResponse.json).toHaveBeenCalledWith({
         message: 'Ping successfully',
-        documentation: 'https://dev.risalamin.com/docs'
+        documentation: `${mockPublicUrl}/docs`
       });
     });
   });
