@@ -1,6 +1,6 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
+  up: async (queryInterface, _Sequelize) => {
     const { faker } = await import('@faker-js/faker');
     const authService = await import('../../api/services/auth.js');
 
@@ -50,7 +50,7 @@ module.exports = {
 
     return queryInterface.bulkInsert('Users', placeholderUsers);
   },
-  down: (queryInterface, Sequelize) => {
+  down: (queryInterface, _Sequelize) => {
     // @ts-ignore
     return queryInterface.bulkDelete('Users', null, {});
   }
