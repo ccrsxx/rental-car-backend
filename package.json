@@ -10,6 +10,7 @@
     "dev": "cross-env NODE_ENV=development nodemon app/index.js",
     "start": "cross-env NODE_ENV=production node app/index.js",
     "lint": "eslint . --max-warnings=0",
+    "format": "prettier --check .",
     "db:create": "sequelize-cli db:create",
     "db:drop": "sequelize-cli db:drop",
     "db:migrate": "sequelize-cli db:migrate",
