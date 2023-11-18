@@ -21,6 +21,7 @@ export const HOST_PORT = process.env.PORT ?? process.env.HOST_PORT;
 export const {
   DB_HOST,
   JWT_SECRET,
+  PUBLIC_URL,
   DB_USERNAME,
   DB_PASSWORD,
   DB_DATABASE,
