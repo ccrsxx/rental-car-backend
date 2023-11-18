@@ -1,5 +1,6 @@
 import {
   DB_HOST,
+  DB_PORT,
   DB_USERNAME,
   DB_PASSWORD,
   DB_DATABASE
@@ -11,5 +12,6 @@ export default {
   password: DB_PASSWORD,
   database: DB_DATABASE,
   host: DB_HOST,
+  port: +DB_PORT,
   dialect: 'postgres'
 };
