@@ -50,7 +50,9 @@ export async function getCar(req, res) {
 export async function createCar(req, res) {
   const { body } = req;
 
-  const { id: userId, image } = res.locals.user;
+  const { id: userId, image: userImage } = res.locals.user;
+
+  const image = res.locals.image ?? userImage;
 
   try {
     const bodyWithImage = { ...body, image: image };
