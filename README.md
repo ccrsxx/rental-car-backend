@@ -1,9 +1,3 @@
----
-title: Challenge 1 - Express app with Authentication and PostgreSQL
-description: Write an Express app with Authentication and PostgreSQL
-nodeProject: true
----
-
 # Simple CRUD application for rental cars
 
 All the documentation for the API can be found on [Swagger](https://dev.risalamin.com/docs).
