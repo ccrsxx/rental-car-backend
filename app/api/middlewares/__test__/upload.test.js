@@ -2,7 +2,7 @@ import { jest } from '@jest/globals';
 import { ApplicationError } from '../../../libs/error.js';
 import * as Types from '../../../libs/types/common.js';
 
-/** @typedef {{ cloudinary: { uploader: { upload: jest.Mock }}}} CloudinaryLibMock */
+/** @typedef {{ cloudinary: { uploader: { upload: jest.Mock } } }} CloudinaryLibMock */
 /** @typedef {Record<keyof import('../upload.js'), jest.Mock>} UploadMiddlewareMock */
 /** @typedef {Record<keyof import('../../../libs/multer.js'), jest.Mock>} MulterLibMock */
 

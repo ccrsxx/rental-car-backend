@@ -1,8 +1,8 @@
 import { jest } from '@jest/globals';
 import { ApplicationError } from '../../../libs/error.js';
 
-/** @typedef {{ default: Record<keyof import('bcrypt'), jest.Mock>}} BcryptMock */
-/** @typedef {{ default: Record<keyof import('jsonwebtoken'), jest.Mock>}} JWTMock */
+/** @typedef {{ default: Record<keyof import('bcrypt'), jest.Mock> }} BcryptMock */
+/** @typedef {{ default: Record<keyof import('jsonwebtoken'), jest.Mock> }} JWTMock */
 /** @typedef {Record<keyof import('../../services/user.js'), jest.Mock>} UserServiceMock */
 /** @typedef {Record<keyof import('../../services/auth.js'), jest.Mock>} AuthServiceMock */
 

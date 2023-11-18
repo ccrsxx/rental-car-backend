@@ -4,8 +4,8 @@ import * as CarModel from '../../api/models/car.js';
 /**
  * Function type for middleware.
  *
- * @template {Record<string, any>} [T=Record<string, any>] Default is
- *   `Record<string, any>`. Default is `Record<string, any>`
+ * @template {Record<string, any>} [T=Record<string, any>] Default is. Default
+ *   is `Record<string, any>`
  * @callback Middleware
  * @param {import('express').Request} req
  * @param {import('express').Response<any, T>} res
