@@ -10,6 +10,15 @@ jobs:
     name: 🔑 Migrate database
     runs-on: ubuntu-latest
 
+    environment: Production
+    env:
+      DB_HOST: ${{ secrets.DB_HOST }}
+      DB_PORT: ${{ secrets.DB_PORT }}
+      PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+      DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      DB_DATABASE: ${{ secrets.DB_DATABASE }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
