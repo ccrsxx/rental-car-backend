@@ -16,9 +16,10 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+export const HOST_PORT = process.env.PORT ?? process.env.HOST_PORT;
+
 export const {
   DB_HOST,
-  HOST_PORT,
   JWT_SECRET,
   DB_USERNAME,
   DB_PASSWORD,
