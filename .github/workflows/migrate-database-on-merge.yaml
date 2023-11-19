@@ -26,8 +26,8 @@ jobs:
         run: npm ci
 
       - name: Create database
+        continue-on-error: true
         run: npm run db:create
 
       - name: Migrate database
-        if: always()
         run: npm run db:migrate
