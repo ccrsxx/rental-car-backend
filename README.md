@@ -1,8 +1,8 @@
 # Simple CRUD application for rental cars
 
-All the documentation for the API can be found on [Swagger](https://dev.risalamin.com/docs).
+All the documentation for the API can be found on [Swagger](https://api-rental-car.risalamin.com/docs).
 
-The API is deployed on [https://dev.risalamin.com](https://dev.risalamin.com), you can hit the endpoints directly from there. It might not be available on the future, so you can also run it locally.
+The API is deployed on [https://api-rental-car.risalamin.com](https://api-rental-car.risalamin.com) or backup server at [https://dev.risalamin.com](https://dev.risalamin.com), you can hit the endpoints directly from there.
 
 Here's the ERD for the database:
 
