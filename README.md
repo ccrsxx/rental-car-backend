@@ -34,13 +34,13 @@ Here are the steps to run the project locally.
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/ccrsxx/binar-academy.git
+   git clone https://github.com/ccrsxx/rental-car-backend.git
    ```
 
 1. Change directory to the project
 
    ```bash
-   cd binar-academy/public/assignments/chapter_05/challenge_01
+   cd rental-car-backend
    ```
 
 1. Install dependencies
