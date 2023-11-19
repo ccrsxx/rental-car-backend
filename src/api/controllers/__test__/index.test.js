@@ -23,7 +23,7 @@ describe('Index controller', () => {
 
       expect(mockResponse.status).toHaveBeenCalledWith(200);
       expect(mockResponse.json).toHaveBeenCalledWith({
-        message: 'Ping successfully on dev',
+        message: 'Ping successfully',
         documentation: `${mockPublicUrl}/docs`
       });
     });
