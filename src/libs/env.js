@@ -16,13 +16,18 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+const HEROKU_APP_NAME = process.env.HEROKU_APP_NAME;
+
+export const PUBLIC_URL = HEROKU_APP_NAME
+  ? `https://${HEROKU_APP_NAME}.herokuapp.com`
+  : process.env.PUBLIC_URL;
+
 export const HOST_PORT = process.env.PORT ?? process.env.HOST_PORT;
 
 export const {
   DB_HOST,
   DB_PORT,
   JWT_SECRET,
-  PUBLIC_URL,
   DB_USERNAME,
   DB_PASSWORD,
   DB_DATABASE,
