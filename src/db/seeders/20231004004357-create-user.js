@@ -15,7 +15,7 @@ module.exports = {
       email: 'subaru@rezero.com',
       image: 'subaru.png',
       username: 'subaru',
-      password: 'subaru'
+      password: '$2b$10$OIg4QDx2EE7umCUmnKeCOewwr8E7WihQa4kDYegM2aN7v5g88Ao9C'
     };
 
     /** @type {BasicUser} */
@@ -25,7 +25,7 @@ module.exports = {
       email: 'rem@rezero.com',
       image: 'rem.png',
       username: 'rem',
-      password: 'rem'
+      password: '$2b$10$BraSULLY74yM7PswG4MY5elTjpO.TOO.xTS5V.G.SqJdMcTI9gCsa'
     };
 
     /** @type {BasicUser} */
@@ -35,7 +35,7 @@ module.exports = {
       email: 'emilia@rezero.com',
       image: 'emilia.png',
       username: 'emilia',
-      password: 'emilia'
+      password: '$2b$10$JERVFQKdaqSd7As6QG3/KeY.EsZYd4oQTD78rESvt6jzYtjzA7tSK'
     };
 
     /** @type {Omit<UserAttributes, 'id'>[]} */
